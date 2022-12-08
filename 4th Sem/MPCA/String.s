@@ -1,0 +1,24 @@
+.DATA
+	S: .ASCIZ "My name is Bond"
+
+
+.TEXT
+	LDR R0,=S
+	MOV R2,#0   
+
+LOOP:
+	LDRB R1,[R0],#1
+	CMP R1,#'n'
+	BEQ ADD
+
+LOOP1:
+	CMP R1,#0
+	BNE LOOP
+	B END
+
+ADD:
+	ADD R2,R2,#1
+	B LOOP1
+
+END:
+	SWI 0X011

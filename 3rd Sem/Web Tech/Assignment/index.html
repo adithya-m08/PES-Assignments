@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Loan Agreement</title>
+    <style>
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      input {
+        outline: 0;
+        border-width: 0 0 2px;
+      }
+      input:focus {
+        background-color: aliceblue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Personal Loan Agreement</h1>
+    <hr />
+    <p>
+      This loan Agreement is made and will be effective on
+      <input type="number" name="dd" style="width: 2%;"/>/ <input type="number" name="mm" style="width: 2%;"/>/
+      <input type="number" name="yyyy" style="width: 2%;"/>
+    </p>
+    <h2>BETWEEN</h2>
+    <p>
+      <input type="text" name="b-name" />hereinafter reffered to as the
+      "borrower" with address of
+    </p>
+    <input type="text" name="b-address" style="width: 80%" />
+    <h2>AND</h2>
+    <p>
+      <input type="text" name="l-name" />hereinafter reffered to as the "lender"
+      with address of
+    </p>
+    <input type="text" name="l-address" style="width: 80%" /><br /> <br>
+
+    <h2>Terms and Conditions:</h2>
+    <hr />
+
+    <h2>Promise to pay</h2>
+    <p>
+      Within <input type="number" name="months" /> months from today, borrower
+      promises to pay the Lender <input type="number" name="amount" /> dollars ($
+      <input type="number" name="figures" />) and interest as well as other
+      charges avowed below.
+    </p>
+
+    <h2>Liability</h2>
+    <p>
+      Although this Agreement maybe signed below by more than one person , each
+      of the undersigned
+    </p>
+
+    <h2>Details of Loan</h2>
+    <p style="margin-left: 20px">
+      <b
+        >Amount of Loan: $ <input type="number" name="amount" /><br />
+        Other(describe): $ <input type="number" name="other" /><br />
+        Amount financed: $ <input type="number" name="finance" /><br />
+        Finance charges: $ <input type="number" name="fcharge" /><br />
+        Total Payments: $ <input type="number" name="total" /><br />
+        Annual percentage rate: <input type="number" name="rate" />%<br />
+      </b>
+    </p>
+
+    <h2>Repayment of Loan</h2>
+    <p>
+      Borrower will pay back in the following manner: repay the amount of this
+      note in <input type="number" name="installments" /> equal continuos
+      monthly installments of $ <input type="number" name="monthly" /> each on
+      the <input type="number" name="day" /> day of each month preliminary on
+      the <input type="number" name="a" /> day of
+      <input type="number" name="b" />, 20<input type="number" name="yy" style="width: 2%;"/>,
+      ending on <input type="number" name="c" />, 20<input type="number" name="yy2" style="width: 2%;"/>
+    </p>
+
+    <h2>Prepayment of loan</h2>
+    <p>Borrower can pay the loan back asap blah blah</p>
+
+    <p style="text-align: right">Todays date is <span id="date-time"></span></p>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+$date
+	Tue Aug 31 10:02:22 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module TB $end
+$var wire 1 ! cy $end
+$var wire 1 " hc $end
+$var wire 1 # hs $end
+$var wire 1 $ ss $end
+$var reg 1 % aa $end
+$var reg 1 & bb $end
+$var reg 1 ' cc $end
+$scope module add1 $end
+$var wire 1 ( a $end
+$var wire 1 ) b $end
+$var wire 1 * cin $end
+$var wire 1 ! cout $end
+$var wire 1 $ sum $end
+$var wire 1 + t $end
+$upscope $end
+$scope module add2 $end
+$var wire 1 ( a $end
+$var wire 1 ) b $end
+$var wire 1 # ha $end
+$var wire 1 " hca $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#5
+1!
+1+
+1#
+1'
+1*
+1&
+1)
+#10
+0!
+1$
+0'
+0*
+0&
+0)
+1%
+1(
+#15
+1!
+0$
+0+
+0#
+1"
+1&
+1)
+#20
+0!
+1$
+0"
+1'
+1*
+0&
+0)
+0%
+0(

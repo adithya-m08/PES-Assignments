@@ -1,0 +1,34 @@
+.DATA
+	A: .WORD 0X12345678
+	SUM: .WORD
+
+.TEXT
+	LDR R5,=A 		
+	LDR R6,=SUM  		
+	LDR R0,[R5]		
+	MOV R1,#32		
+	MOV R4,#0	
+	MOV R8,#0 		
+
+LABEL: 
+	MOV R3,#0		
+	MOVS R0,R0,LSR #1	
+	ADDCS R3,R3,#1		
+	MOV R7,R3,LSL R8	
+	ADD R4,R4,R7		
+	SUB R1,R1,#1		
+	ADD R8,R8,#1		
+	CMP R8,#4
+	BEQ LOOP
+
+
+LOOP1:
+	CMP R1,#00		
+	BNE LABEL
+	STR R4,[R6]
+	SWI 0X11   
+
+LOOP:
+	MOV R8,#0 
+	B LOOP1
+

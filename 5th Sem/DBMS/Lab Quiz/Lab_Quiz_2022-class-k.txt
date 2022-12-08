@@ -1,0 +1,45 @@
+Consider the following schema 
+STUDENT (Name, StudentNumber, Class, Major)
+COURSE  (CourseName , CourseNumber,  CreditHours , Dept)
+SECTION  (SectionIdentifier ,CourseNumber , Semester, Year ,Instructor)
+Grade_Report  (StudentNumber ,SectionIdentifier ,Grade)
+Prerequisite (CourseNumber, PrerequisiteNumber)
+
+Set - 01
+a)Retrieve the names of all the courses taught by the Professors during the period 2001- 2004
+
+b) We need to maintain a report of students as follows:
+
+Student_Report(StudentNumber, SectionIdentifier,marks)
+
+Populate the report with each student's number, the courses(sectons) he/she has registered/enrolled for, with marks of each student for the courses they have enrolled. 
+(Marks should be in multiples of 10 with maximum of 100 marks). 
+****You cannot use insert statement directly for the above question to populate existing data, Only for new data to be inserted you can use insert statement directly****
+
+c)Create a trigger so that the total marks scored by each student is automatically updated in the result sheet whenever a record is inserted into Student_Report.
+students_result(StudentNumber,Totalmarks)
+
+d) Create a trigger to specify the remarks based on the Major of a student as follows:
+
+Major 'CS' ---> "Computer Science Engg"
+Major 'EC'   ---> "Electronics Engg
+
+
+Set - 02
+
+a) Retrieve the names and major departments of all students who do not have a grade "A" in any of their courses.
+
+b) We need to maintain report of the student as follows:
+Student_Report(StudentNumber, SectionIdentifier,marks, Instructor)
+
+Populate the report with each student's number, the courses(sectons) he/she has registered/enrolled for, with marks of each student for the courses they have enrolled and the Instructor. 
+(Marks should be in multiples of 10 with maximum of 100 marks). 
+****You cannot use insert statement directly for the above question to populate existing data, Only for new data to be inserted you can use insert statement directly****
+
+c) Create a trigger so that the total and remarks scored by each student is automatically updated in the result sheet whenever a record is inserted into Student_Report.
+students_result(StudentNumber,Total,Average)
+
+d) Create a trigger to specify the remarks based on the grade of a student as follows:
+Grade A -- "Excellent"
+Grade B -- "Very Good"
+Grade C -- "Fair"

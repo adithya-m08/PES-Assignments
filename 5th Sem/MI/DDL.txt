@@ -1,0 +1,19 @@
+create table train(tno integer not null, tname varchar(10), arrival varchar(10), destination varchar(10), availability varchar(10), train_type varchar(10));
+
+create table route_info(from_station_no integer, from_station_name varchar(10), to_station_no integer, distance integer, tno integer, foreign key(tno) references train(tno), primary key(from_station_no, to_station_no));
+
+create table user(user_id integer, user_type varchar(10), fname varchar(10), lname varchar(10), age integer, dob date, pincode integer, street_no integer, primary key(user_id));
+
+create table user_train(tno integer, user_id integer, date_time_stamp datetime, primary key(date_time_stamp), foreign key(tno) references train(tno), foreign key(user_id) references user(user_id));
+
+create table user_phone(user_id integer, phone_no integer, primary key(phone_no), foreign key(user_id) references user(user_id));
+
+create table ticket(pnr integer, train_num integer, travel_date date, departure varchar(10), arrival varchar(10), departure_time time, arrival_time time, user_id integer, train_type varchar(10), compartment_type varchar(10), cmpt_no integer, primary key(pnr), foreign key(user_id) references user(user_id));
+
+create table payment_info(transaction_id integer, bank varchar(10), card_num integer, price integer, pnr integer, primary key(transaction_id), foreign key(pnr) references ticket(pnr));\
+
+create table ticket_passenger(seat_no integer, name varchar(10), age integer, pnr integer, foreign key(pnr) references ticket(pnr));
+
+create table fare_table(train_type integer, compartment_type integer, fareperkm integer, primary(train_type, compartment_type));
+
+
