@@ -1,11 +1,12 @@
-%option noyywrap
 %{
-#define YYSTYPE char*
-#include "y.tab.h"
-#include<stdio.h>
-extern void yyerror(const char*);
+/* DEFINITIONS */
+#define YYSTYPE char* // specify the data type for variable yylval
+#include "y.tab.h" // y.tab.h contains token definitions
+#include <stdio.h>
+extern void yyerror(const char *); // declare the error handling function
+extern int yylineno;
 %}
-
+/* Regular definitions */
 digit [0-9]
 letter [a-zA-Z]
 id {letter}({letter}|{digit})*
@@ -14,9 +15,9 @@ opFraction (\.{digits})?
 opExponent ([Ee][+-]?{digits})?
 number {digits}{opFraction}{opExponent}
 %%
-
-\/\/(.*) ;
-[\t\n] ;
+\/\/(.*) ; // ignore comments
+[\t\r] ; // ignore whitespaces
+\n {++yylineno;}
 "int" {return T_INT;}
 "char" {return T_CHAR;}
 "double" {return T_DOUBLE;}
@@ -35,19 +36,19 @@ number {digits}{opFraction}{opExponent}
 "(" {return *yytext;}
 ")" {return *yytext;}
 "." {return *yytext;}
-"," {return *yytext;}
-"{" {return *yytext;}
-"}" {return *yytext;}
+"," {return *yytext;} // yytext contains the currently matched lexeme
+"{" {return *yytext;} // single char tokens can be passed directly
+"}" {return *yytext;} // (they are tokens in themselves)
 "*" {return *yytext;}
 "+" {return *yytext;}
-"-" {return *yytext;}
 ";" {return *yytext;}
+"-" {return *yytext;}
 "/" {return *yytext;}
 "=" {return *yytext;}
-"<" {return *yytext;}
 ">" {return *yytext;}
+"<" {return *yytext;}
 {number} {return T_NUM;}
-{id}\.h {return T_HEADER;}
+{id}\.h {return T_HEADER;} // ending in .h => header file name
 {id} {return T_ID;}
-. {} 
+. {} // anything else => ignore
 %%
