@@ -1,24 +1,50 @@
 %{
 #include <stdio.h>
+#include <string.h>
+
+enum {
+  T_INT = 256,
+  T_FLOAT,
+  T_PLUS,
+  T_MINUS,
+  T_MUL,
+  T_DIV,
+  T_LPAREN,
+  T_RPAREN,
+};
+
+char *yytext;
+int yyleng;
+int yylineno;
 %}
 
-%%
-int|float|char|double|void         return TOKEN_TYPE;
-for|while|if|else                return TOKEN_KEYWORD;
-[a-zA-Z][a-zA-Z0-9]*           return TOKEN_IDENTIFIER;
-[0-9]+\.[0-9]+|[0-9]+           return TOKEN_NUMBER;
-"=="|"!="|">="|"<="|">"|"<"         return TOKEN_OP_REL;
-"+"|"-"|"*"|"/"|"="               return TOKEN_OP_ARITH;
-";"|","|"("|")"|"{"|"}"             return TOKEN_SEPARATOR;
-"/*"                             return TOKEN_COMMENT;
+digit [0-9]
+letter [a-zA-Z_]
 
 %%
 
-int yylex(void) {
-    return yylex();
+"int"           { return T_INT; }
+"float"         { return T_FLOAT; }
+"+"             { return T_PLUS; }
+"-"             { return T_MINUS; }
+"*"             { return T_MUL; }
+"/"             { return T_DIV; }
+"("             { return T_LPAREN; }
+")"             { return T_RPAREN; }
+{digit}+        { yytext = strdup(yytext); return T_INT; }
+{letter}({letter}|{digit})*
+                { yytext = strdup(yytext); return T_ID; }
+\n              { ++yylineno; }
+[ \t]           { }
+.               { }
+
+%%
+
+int yywrap(void) {
+  return 1;
 }
 
-int main(int argc, char** argv) {
-    yylex();
-    return 0;
+int main(void) {
+  yylex();
+  return 0;
 }
