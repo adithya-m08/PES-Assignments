@@ -13,5 +13,6 @@ public class arrays {
         for (int i = 0; i < myIntArray.length; i++) {
             System.out.println(myIntArray[i]);
         }
+        sc.close();
     }
 }

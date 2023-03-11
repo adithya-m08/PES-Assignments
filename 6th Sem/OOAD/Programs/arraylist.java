@@ -3,8 +3,6 @@ import java.util.*;
 public class arraylist {
     public static void main(String[] args) {
         ArrayList<Integer> list1 = new ArrayList<Integer>();
-        ArrayList<String> list2 = new ArrayList<String>();
-        ArrayList<Boolean> list3 = new ArrayList<Boolean>();
         Scanner sc = new Scanner(System.in);
         int size = sc.nextInt();
         for (int i = 0; i < size; i++) {
@@ -15,5 +13,6 @@ public class arraylist {
 
         list1.sort(null);
         System.out.println(list1);
+        sc.close();
     }
 }
