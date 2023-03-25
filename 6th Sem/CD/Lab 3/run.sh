@@ -1,7 +1,7 @@
 #!/bin/bash
 
-flex lexer_PES1UG20CS803.l
-bison -dy parser_PES1UG20CS803.y
+flex lexer_PES1UG20CS621.l
+bison -dy parser_PES1UG20CS621.y
 gcc y.tab.c lex.yy.c
 
 ./a.exe<sample_input1.c>output1.txt

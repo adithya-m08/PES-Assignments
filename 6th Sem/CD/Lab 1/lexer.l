@@ -41,16 +41,8 @@ int yywrap() {
 }
 
 int main(int argc, char *argv[]) {
-    if (argc < 2) {
-        printf("Usage: %s input_file\n", argv[0]);
-        return 1;
-    }
     
     FILE *input_file = fopen(argv[1], "r");
-    if (!input_file) {
-        printf("Error: Cannot open file %s\n", argv[1]);
-        return 1;
-    }
 
     yyin = input_file;
     yylex();
