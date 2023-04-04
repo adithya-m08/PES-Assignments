@@ -1,0 +1,4 @@
+interface PackageFacade
+{
+	void book();
+}

@@ -1,0 +1,4 @@
+interface HotelBooking
+{
+	void book();
+}
