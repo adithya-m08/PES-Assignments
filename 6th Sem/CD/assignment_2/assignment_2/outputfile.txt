@@ -1,0 +1,4 @@
+ Valid syntax
+Name	size	type	lineno	scope	value
+a	2	2	3	1	1
+i	2	2	4	1	0
