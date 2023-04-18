@@ -1,8 +1,8 @@
 compiler: y.tab.c lex.yy.c
 	gcc y.tab.c lex.yy.c -ll
 
-y.tab.c: yacc.y
-	yacc -d yacc.y
+y.tab.c: parser.y
+	yacc -d parser.y
 
 lex.yy.c: lex.l
 	lex lex.l

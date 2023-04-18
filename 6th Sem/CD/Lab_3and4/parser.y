@@ -54,7 +54,7 @@ VAR: T_ID '=' EXPR 	{
 			}	 
 
 //assign type here to be returned to the declaration grammar
-TYPE : T_INT {type=INT; printf(Int type\n");}
+TYPE : T_INT {type=INT; printf("Int type\n");}
        | T_FLOAT {type=FLOAT;}
        | T_DOUBLE {type=DOUBLE;}
        | T_CHAR {type=CHAR;}

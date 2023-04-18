@@ -75,7 +75,13 @@ extern int yydebug;
     T_HEADER = 281,
     T_MAIN = 282,
     T_ID = 283,
-    T_NUM = 284
+    T_NUM = 284,
+    T_FOR = 285,
+    T_OR = 286,
+    T_AND = 287,
+    T_INCR = 288,
+    T_DECR = 289,
+    T_IFX = 290
   };
 #endif
 /* Tokens.  */
@@ -106,6 +112,12 @@ extern int yydebug;
 #define T_MAIN 282
 #define T_ID 283
 #define T_NUM 284
+#define T_FOR 285
+#define T_OR 286
+#define T_AND 287
+#define T_INCR 288
+#define T_DECR 289
+#define T_IFX 290
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED

@@ -49,63 +49,73 @@ extern int yydebug;
 # define YYTOKENTYPE
   enum yytokentype
   {
-    T_INT = 258,
-    T_CHAR = 259,
-    T_DOUBLE = 260,
-    T_WHILE = 261,
-    T_INC = 262,
-    T_DEC = 263,
-    T_OROR = 264,
-    T_ANDAND = 265,
-    T_EQCOMP = 266,
-    T_NOTEQUAL = 267,
-    T_GREATEREQ = 268,
-    T_LESSEREQ = 269,
-    T_LEFTSHIFT = 270,
-    T_RIGHTSHIFT = 271,
-    T_PRINTLN = 272,
-    T_STRING = 273,
-    T_FLOAT = 274,
-    T_BOOLEAN = 275,
-    T_IF = 276,
-    T_ELSE = 277,
-    T_STRLITERAL = 278,
-    T_DO = 279,
-    T_INCLUDE = 280,
-    T_HEADER = 281,
-    T_MAIN = 282,
-    T_ID = 283,
-    T_NUM = 284
+    INT = 258,
+    FLOAT = 259,
+    CHAR = 260,
+    DOUBLE = 261,
+    WHILE = 262,
+    IF = 263,
+    ELSE = 264,
+    FOR = 265,
+    DO = 266,
+    BREAK = 267,
+    CONTINUE = 268,
+    INCLUDE = 269,
+    MAIN = 270,
+    RETURN = 271,
+    VOID = 272,
+    OP_INC = 273,
+    OP_DEC = 274,
+    OP_GREATER_EQUAL = 275,
+    OP_LESSER_EQUAL = 276,
+    OP_EQUAL = 277,
+    OP_NOT_EQUAL = 278,
+    OP_AND = 279,
+    OP_OR = 280,
+    OP_PLUS_EQUAL = 281,
+    OP_MINUS_EQUAL = 282,
+    OP_MULTIPLY_EQUAL = 283,
+    OP_DIVIDE_EQUAL = 284,
+    OP_MOD_EQUAL = 285,
+    HEADER = 286,
+    ID = 287,
+    NUMBER = 288,
+    STRING = 289
   };
 #endif
 /* Tokens.  */
-#define T_INT 258
-#define T_CHAR 259
-#define T_DOUBLE 260
-#define T_WHILE 261
-#define T_INC 262
-#define T_DEC 263
-#define T_OROR 264
-#define T_ANDAND 265
-#define T_EQCOMP 266
-#define T_NOTEQUAL 267
-#define T_GREATEREQ 268
-#define T_LESSEREQ 269
-#define T_LEFTSHIFT 270
-#define T_RIGHTSHIFT 271
-#define T_PRINTLN 272
-#define T_STRING 273
-#define T_FLOAT 274
-#define T_BOOLEAN 275
-#define T_IF 276
-#define T_ELSE 277
-#define T_STRLITERAL 278
-#define T_DO 279
-#define T_INCLUDE 280
-#define T_HEADER 281
-#define T_MAIN 282
-#define T_ID 283
-#define T_NUM 284
+#define INT 258
+#define FLOAT 259
+#define CHAR 260
+#define DOUBLE 261
+#define WHILE 262
+#define IF 263
+#define ELSE 264
+#define FOR 265
+#define DO 266
+#define BREAK 267
+#define CONTINUE 268
+#define INCLUDE 269
+#define MAIN 270
+#define RETURN 271
+#define VOID 272
+#define OP_INC 273
+#define OP_DEC 274
+#define OP_GREATER_EQUAL 275
+#define OP_LESSER_EQUAL 276
+#define OP_EQUAL 277
+#define OP_NOT_EQUAL 278
+#define OP_AND 279
+#define OP_OR 280
+#define OP_PLUS_EQUAL 281
+#define OP_MINUS_EQUAL 282
+#define OP_MULTIPLY_EQUAL 283
+#define OP_DIVIDE_EQUAL 284
+#define OP_MOD_EQUAL 285
+#define HEADER 286
+#define ID 287
+#define NUMBER 288
+#define STRING 289
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
