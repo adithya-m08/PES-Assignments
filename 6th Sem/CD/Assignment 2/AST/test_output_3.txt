@@ -1,0 +1,1 @@
+if-else,>,a,b,seq,=,a,+,a,1,=,b,-,b,1,seq,=,a,-,a,1,seq,=,b,-,b,1,if-else,<,b,0,=,b,+,b,1,=,b,0,Valid syntax

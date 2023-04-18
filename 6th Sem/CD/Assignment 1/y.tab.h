@@ -49,63 +49,77 @@ extern int yydebug;
 # define YYTOKENTYPE
   enum yytokentype
   {
-    T_INT = 258,
-    T_CHAR = 259,
-    T_DOUBLE = 260,
-    T_WHILE = 261,
-    T_INC = 262,
-    T_DEC = 263,
-    T_OROR = 264,
-    T_ANDAND = 265,
-    T_EQCOMP = 266,
-    T_NOTEQUAL = 267,
-    T_GREATEREQ = 268,
-    T_LESSEREQ = 269,
-    T_LEFTSHIFT = 270,
-    T_RIGHTSHIFT = 271,
-    T_PRINTLN = 272,
-    T_STRING = 273,
-    T_FLOAT = 274,
-    T_BOOLEAN = 275,
-    T_IF = 276,
-    T_ELSE = 277,
-    T_STRLITERAL = 278,
-    T_DO = 279,
-    T_INCLUDE = 280,
-    T_HEADER = 281,
-    T_MAIN = 282,
-    T_ID = 283,
-    T_NUM = 284
+    INT = 258,
+    FLOAT = 259,
+    CHAR = 260,
+    DOUBLE = 261,
+    WHILE = 262,
+    IF = 263,
+    ELSE = 264,
+    FOR = 265,
+    DO = 266,
+    BREAK = 267,
+    CONTINUE = 268,
+    INCLUDE = 269,
+    MAIN = 270,
+    RETURN = 271,
+    VOID = 272,
+    OPERATOR_INCREMENT = 273,
+    OPERATOR_DECREMENT = 274,
+    OPERATOR_GREATER_EQUAL = 275,
+    OPERATOR_LESS_EQUAL = 276,
+    OPERATOR_EQUAL = 277,
+    OPERATOR_NOT_EQUAL = 278,
+    OPERATOR_AND = 279,
+    OPERATOR_OR = 280,
+    OPERATOR_PLUS_EQUAL = 281,
+    OPERATOR_MINUS_EQUAL = 282,
+    OPERATOR_MULTIPLY_EQUAL = 283,
+    OPERATOR_DIVIDE_EQUAL = 284,
+    OPERATOR_MODULUS_EQUAL = 285,
+    BOOLEAN_TRUE = 286,
+    BOOLEAN_FALSE = 287,
+    HEADER = 288,
+    ID = 289,
+    NUMBER = 290,
+    STRING = 291
   };
 #endif
 /* Tokens.  */
-#define T_INT 258
-#define T_CHAR 259
-#define T_DOUBLE 260
-#define T_WHILE 261
-#define T_INC 262
-#define T_DEC 263
-#define T_OROR 264
-#define T_ANDAND 265
-#define T_EQCOMP 266
-#define T_NOTEQUAL 267
-#define T_GREATEREQ 268
-#define T_LESSEREQ 269
-#define T_LEFTSHIFT 270
-#define T_RIGHTSHIFT 271
-#define T_PRINTLN 272
-#define T_STRING 273
-#define T_FLOAT 274
-#define T_BOOLEAN 275
-#define T_IF 276
-#define T_ELSE 277
-#define T_STRLITERAL 278
-#define T_DO 279
-#define T_INCLUDE 280
-#define T_HEADER 281
-#define T_MAIN 282
-#define T_ID 283
-#define T_NUM 284
+#define INT 258
+#define FLOAT 259
+#define CHAR 260
+#define DOUBLE 261
+#define WHILE 262
+#define IF 263
+#define ELSE 264
+#define FOR 265
+#define DO 266
+#define BREAK 267
+#define CONTINUE 268
+#define INCLUDE 269
+#define MAIN 270
+#define RETURN 271
+#define VOID 272
+#define OPERATOR_INCREMENT 273
+#define OPERATOR_DECREMENT 274
+#define OPERATOR_GREATER_EQUAL 275
+#define OPERATOR_LESS_EQUAL 276
+#define OPERATOR_EQUAL 277
+#define OPERATOR_NOT_EQUAL 278
+#define OPERATOR_AND 279
+#define OPERATOR_OR 280
+#define OPERATOR_PLUS_EQUAL 281
+#define OPERATOR_MINUS_EQUAL 282
+#define OPERATOR_MULTIPLY_EQUAL 283
+#define OPERATOR_DIVIDE_EQUAL 284
+#define OPERATOR_MODULUS_EQUAL 285
+#define BOOLEAN_TRUE 286
+#define BOOLEAN_FALSE 287
+#define HEADER 288
+#define ID 289
+#define NUMBER 290
+#define STRING 291
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED

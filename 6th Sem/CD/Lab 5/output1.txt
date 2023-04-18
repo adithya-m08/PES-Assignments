@@ -1,0 +1,5 @@
+/, 9, 2, t1
++, t1, a, t2
+-, t2, b, t3
+=, t3,  , x
+Valid syntax
