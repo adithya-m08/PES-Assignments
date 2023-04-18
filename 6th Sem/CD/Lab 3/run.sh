@@ -1,9 +1,7 @@
 #!/bin/bash
 
-flex lexer_PES1UG20CS621.l
-bison -dy parser_PES1UG20CS621.y
-gcc y.tab.c lex.yy.c
+lex lexer.l
+yacc -d parser.y -Wno
+gcc -g y.tab.c lex.yy.c -ll
 
-./a.exe<sample_input1.c>output1.txt
-./a.exe<sample_input2.c>output2.txt
-./a.exe<sample_input3.c>output3.txt
+./a.out<sample_input1.c>output1.txt
