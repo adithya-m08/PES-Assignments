@@ -1,66 +1,52 @@
 %{
-#include <stdio.h>
-#include "y.tab.h"
-void yyerror(char *s);
-int yylinenumber;
+    #include "y.tab.h"
+    void yyerror(const char*);
 %}
 
-digit [0-9]
-letter [a-zA-Z]
-letterspecial [a-zA-Z_]
-alnum [a-zA-Z0-9]
-alnumspecial [a-zA-Z0-9_]
-whitespace [ \t\r]
-
-polarity [-+]?
-fraction  (\.{digit}+)?
-exponent ([Ee][+-]{digit}+)?
-number {digit}+{fraction}{exponent}
-id {letter}{alnumspecial}*
-%x state
 %%
+"//".*\n {
+    /* do nothing */
+}
 
-\/\/(.*) ;
-"/*"([^*]|\*+[^*/])*\*+"/" { ++yylinenumber; };
 
-int return INT;
-float return FLOAT;
-char return CHAR;
-double return DOUBLE;
-while return WHILE;
-if return IF;
+#include\s*\<([a-zA-Z_][a-zA-Z0-9_]*\.h)\> return HEADER;
+main    return MAIN;
+int    return INT;
+char    return CHAR;
+float    return FLOAT;
+double    return DOUBLE;
+if  return IF;
 else return ELSE;
+while return WHILE;
 for return FOR;
-do return DO;
-break return BREAK;
-continue return CONTINUE;
-#include return INCLUDE;
-main return MAIN;
-return return RETURN;
-void return VOID;
-
-"++" return OPERATOR_INCREMENT;
-"--" return OPERATOR_DECREMENT;
-">=" return OPERATOR_GREATER_EQUAL;
-"<=" return OPERATOR_LESS_EQUAL;
-"==" return OPERATOR_EQUAL;
-"!=" return OPERATOR_NOT_EQUAL;
-"&&" return OPERATOR_AND;
-"||" return OPERATOR_OR;
-"+=" return OPERATOR_PLUS_EQUAL;
-"-=" return OPERATOR_MINUS_EQUAL;
-"*=" return OPERATOR_MULTIPLY_EQUAL;
-"/=" return OPERATOR_DIVIDE_EQUAL;
-"%=" return OPERATOR_MODULUS_EQUAL;
-"true" return BOOLEAN_TRUE;
-"false" return BOOLEAN_FALSE;
-
-\n { ++yylinenumber; };
-{whitespace} ;
-{letter}{alnumspecial}*\.h return HEADER;
-{id}* return ID;
-{number} return NUMBER;
-"'".*"'" return STRING;
-. return *yytext;
-
+=   return ASSGN;
+">"   return GREATER;
+"<"   return LESSER;
+==   return EQCOMP;
+!=   return NOTEQ;
+!   return BANG;
+">="   return GREATEREQ;
+"<="   return LESSEREQ;
+"||"    return OR_OR;
+"&&"    return AND_AND;
+"++"    return PLUS_PLUS;
+"--"    return MINUS_MINUS;
+true    return TRUE;
+false   return FALSE;
+[a-zA-Z_][a-zA-Z_0-9]*  return ID; 
+[0-9]+ return NUM;
+"." return DOT;
+\+   return PLUS;
+-   return MINUS;
+\*   return STAR;
+\/   return DIVIDE;
+\;   return SEMICOLON;
+\(  return LEFT_PAREN;
+\)  return RIGHT_PAREN;
+\{  return LEFT_BRACE;
+\}  return RIGHT_BRACE;
+\[  return LEFT_SQ;
+\]  return RIGHT_SQ;
+,   return COMMA;
+[ \t\n]+ ; 
 %%

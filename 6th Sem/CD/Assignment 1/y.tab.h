@@ -49,77 +49,87 @@ extern int yydebug;
 # define YYTOKENTYPE
   enum yytokentype
   {
-    INT = 258,
-    FLOAT = 259,
-    CHAR = 260,
-    DOUBLE = 261,
+    HEADER = 258,
+    MAIN = 259,
+    IF = 260,
+    ELSE = 261,
     WHILE = 262,
-    IF = 263,
-    ELSE = 264,
-    FOR = 265,
-    DO = 266,
-    BREAK = 267,
-    CONTINUE = 268,
-    INCLUDE = 269,
-    MAIN = 270,
-    RETURN = 271,
-    VOID = 272,
-    OPERATOR_INCREMENT = 273,
-    OPERATOR_DECREMENT = 274,
-    OPERATOR_GREATER_EQUAL = 275,
-    OPERATOR_LESS_EQUAL = 276,
-    OPERATOR_EQUAL = 277,
-    OPERATOR_NOT_EQUAL = 278,
-    OPERATOR_AND = 279,
-    OPERATOR_OR = 280,
-    OPERATOR_PLUS_EQUAL = 281,
-    OPERATOR_MINUS_EQUAL = 282,
-    OPERATOR_MULTIPLY_EQUAL = 283,
-    OPERATOR_DIVIDE_EQUAL = 284,
-    OPERATOR_MODULUS_EQUAL = 285,
-    BOOLEAN_TRUE = 286,
-    BOOLEAN_FALSE = 287,
-    HEADER = 288,
-    ID = 289,
-    NUMBER = 290,
-    STRING = 291
+    FOR = 263,
+    ASSGN = 264,
+    ID = 265,
+    NUM = 266,
+    PLUS = 267,
+    DOT = 268,
+    MINUS = 269,
+    STAR = 270,
+    DIVIDE = 271,
+    SEMICOLON = 272,
+    LEFT_PAREN = 273,
+    BANG = 274,
+    RIGHT_PAREN = 275,
+    AND_AND = 276,
+    PLUS_PLUS = 277,
+    TRUE = 278,
+    FALSE = 279,
+    MINUS_MINUS = 280,
+    OR_OR = 281,
+    LEFT_BRACE = 282,
+    RIGHT_BRACE = 283,
+    COMMA = 284,
+    INT = 285,
+    FLOAT = 286,
+    DOUBLE = 287,
+    CHAR = 288,
+    GREATER = 289,
+    LESSER = 290,
+    EQCOMP = 291,
+    NOTEQ = 292,
+    GREATEREQ = 293,
+    LESSEREQ = 294,
+    LEFT_SQ = 295,
+    RIGHT_SQ = 296
   };
 #endif
 /* Tokens.  */
-#define INT 258
-#define FLOAT 259
-#define CHAR 260
-#define DOUBLE 261
+#define HEADER 258
+#define MAIN 259
+#define IF 260
+#define ELSE 261
 #define WHILE 262
-#define IF 263
-#define ELSE 264
-#define FOR 265
-#define DO 266
-#define BREAK 267
-#define CONTINUE 268
-#define INCLUDE 269
-#define MAIN 270
-#define RETURN 271
-#define VOID 272
-#define OPERATOR_INCREMENT 273
-#define OPERATOR_DECREMENT 274
-#define OPERATOR_GREATER_EQUAL 275
-#define OPERATOR_LESS_EQUAL 276
-#define OPERATOR_EQUAL 277
-#define OPERATOR_NOT_EQUAL 278
-#define OPERATOR_AND 279
-#define OPERATOR_OR 280
-#define OPERATOR_PLUS_EQUAL 281
-#define OPERATOR_MINUS_EQUAL 282
-#define OPERATOR_MULTIPLY_EQUAL 283
-#define OPERATOR_DIVIDE_EQUAL 284
-#define OPERATOR_MODULUS_EQUAL 285
-#define BOOLEAN_TRUE 286
-#define BOOLEAN_FALSE 287
-#define HEADER 288
-#define ID 289
-#define NUMBER 290
-#define STRING 291
+#define FOR 263
+#define ASSGN 264
+#define ID 265
+#define NUM 266
+#define PLUS 267
+#define DOT 268
+#define MINUS 269
+#define STAR 270
+#define DIVIDE 271
+#define SEMICOLON 272
+#define LEFT_PAREN 273
+#define BANG 274
+#define RIGHT_PAREN 275
+#define AND_AND 276
+#define PLUS_PLUS 277
+#define TRUE 278
+#define FALSE 279
+#define MINUS_MINUS 280
+#define OR_OR 281
+#define LEFT_BRACE 282
+#define RIGHT_BRACE 283
+#define COMMA 284
+#define INT 285
+#define FLOAT 286
+#define DOUBLE 287
+#define CHAR 288
+#define GREATER 289
+#define LESSER 290
+#define EQCOMP 291
+#define NOTEQ 292
+#define GREATEREQ 293
+#define LESSEREQ 294
+#define LEFT_SQ 295
+#define RIGHT_SQ 296
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
