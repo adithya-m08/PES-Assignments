@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringbootThymeleafWebAppApplication<springboot-thymeleaf-web-app>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "net.springboot.javaguides.SpringbootThymeleafWebAppApplication",
+            "projectName": "springboot-thymeleaf-web-app",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
