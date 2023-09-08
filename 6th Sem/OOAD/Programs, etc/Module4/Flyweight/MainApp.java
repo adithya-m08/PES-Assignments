@@ -16,19 +16,23 @@ public class MainApp {
             store.storeBook(getRandomName(), getRandomPrice(), "Action", "Follett", "Stuff");
             store.storeBook(getRandomName(), getRandomPrice(), "Fantasy", "Ingram", "Extra");
         }
-//        store.displayBooks();
+        // store.displayBooks();
         System.out.println(BOOKS_TO_INSERT + " Books Inserted");
         System.out.println("==========================================");
         System.out.println("Memory Usage: ");
-        System.out.println("Book Size (20 bytes) * " + BOOKS_TO_INSERT + " + BookTypes Size (30 bytes) * " + BOOK_TYPES + "");
+        System.out.println(
+                "Book Size (20 bytes) * " + BOOKS_TO_INSERT + " + BookTypes Size (30 bytes) * " + BOOK_TYPES + "");
         System.out.println("==========================================");
-        System.out.println("Total: " + ((BOOKS_TO_INSERT * 20 + BOOK_TYPES * 30) / 1024 / 1024) + "MB (instead of " + ((BOOKS_TO_INSERT * 50) / 1024 / 1024) + "MB)");
-        // Tip: Try to comment out the @ToString annotation in the BookType class and check that indeed the same two objects are being referenced by all our books!
+        System.out.println("Total: " + ((BOOKS_TO_INSERT * 20 + BOOK_TYPES * 30) / 1024 / 1024) + "MB (instead of "
+                + ((BOOKS_TO_INSERT * 50) / 1024 / 1024) + "MB)");
+        // Tip: Try to comment out the @ToString annotation in the BookType class and
+        // check that indeed the same two objects are being referenced by all our books!
 
     }
 
     private static String getRandomName() {
-        List<String> books = List.of("book_1", "book_2", "book_3", "book_4", "book_5", "book_6", "book_7", "book_8", "book_9", "book_10");
+        List<String> books = List.of("book_1", "book_2", "book_3", "book_4", "book_5", "book_6", "book_7", "book_8",
+                "book_9", "book_10");
         return books.get(new Random().nextInt(books.size()));
     }
 
